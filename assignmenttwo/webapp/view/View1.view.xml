@@ -1,0 +1,75 @@
+<mvc:View xmlns:core="sap.ui.core" controllerName="assignmenttwo.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+ 
+    <VBox>
+    <HBox class="sapUiSmallMargin">
+        <Label text="Corporate/Division" class="label"  width="20rem" required="true"/>
+        <Select id="selectSite" required="true" change="onSiteChange" >
+        <items>
+            <core:Item key="" text="Select Option"></core:Item>
+            <core:Item key="12-HUA" text="12-HUA"></core:Item>
+            <core:Item key="18-HUA" text="18-HUA"></core:Item>
+            <core:Item key="43-HUA" text="43-HUA"></core:Item>
+           
+        </items>
+        </Select>
+    </HBox>
+ 
+    <HBox class="sapUiSmallMargin">
+        <Label text="*Document Type" class="label" visible="false" id="docLabel" width="20rem" required="true" />
+        <Select id="docType" required="true" change="onDocChange" visible="false">
+        <items>
+            <core:Item key="" text="Select Option"></core:Item>
+            <core:Item key="20 Procedure" text="20 Procedure"></core:Item>
+            <core:Item key="16 Form" text="16 Form"></core:Item>
+            <core:Item key="20A Form" text="20A Form"></core:Item>
+        </items>
+        </Select>
+    </HBox>
+ 
+ 
+    <HBox class="sapUiSmallMargin">
+        <Label text="*Function/Department" class="label" visible="false" id="depLabel"  width="20rem" required="true"/>
+        <Select id="depType" required="true" change="onDepChange" visible="false">
+        <items>
+            <core:Item key="" text="Select Option"></core:Item>
+            <core:Item key="IT-Information Technology" text="IT-Information Technology"></core:Item>
+            <core:Item key="CS-Computer Science" text="CS-Computer Science"></core:Item>
+            <core:Item key="IE-Indrustial Engineering" text="IE-Indrustial Engineering"></core:Item>
+        </items>
+        </Select>
+    </HBox>
+ 
+ 
+     <HBox class="sapUiSmallMargin">
+        <Label text="*Customer" class="label" visible="false" id="cusLabel"  width="20rem"/>
+        <Select id="cusUpdate"  change="cusChange" visible="false">
+        <items>
+            <core:Item key="" text="Select Option"></core:Item>
+            <core:Item key="00HPT" text="00HPT"></core:Item>
+            <core:Item key="001HQR" text="001HQR"></core:Item>
+            <core:Item key="009TRE" text="009TRE"></core:Item>
+        </items>
+        </Select>
+    </HBox>
+ 
+    <HBox class="sapUiSmallMargin">
+    <Label text="Proposed Number" class="label" width="20rem" />
+    <Input placeholder="Proposed Number" editable="false" width="40rem" id="ProposedNumber"/>
+    </HBox>
+ 
+ 
+    <HBox class="sapUiSmallMargin">
+    <Label text="Document Number" class="label" width="20rem" visible="false" id="documentLabel" />
+    <Input placeholder="Documnet Number" editable="false" width="40rem" id="DocumentNumber" visible="false"/>
+    </HBox>
+ 
+    <Button class="sapUiSmallMargin" text="Next"  press="onNext" type="Accept" width="5rem"/>
+ 
+    </VBox>
+   
+    </Page>
+</mvc:View>
+ 

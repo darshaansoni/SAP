@@ -1,0 +1,81 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="assignmentfirst.controller.Form"
+>
+   <Page title="Employee Health checklist for Covid19">
+           <FlexBox class="main_box">
+               <HBox>
+                   <Label text="Employee ID" class="label" width="10rem"/>
+                   <Input width="20rem"/>
+               </HBox>
+               <HBox>
+                   <Label text="Employee Name" class="label" width="10rem"/>
+                   <Input width="20rem"/>
+
+               </HBox>
+               </FlexBox>
+ 
+               <FlexBox >
+               <HBox>
+                   <Label text="Email Address" class="label" width="10rem"/>
+                   <Input width="20rem"/>
+               </HBox>
+               <HBox>
+                   <Label text="Designation" class="label" width="10rem"/>
+                   <Input width="20rem"/>
+               </HBox>
+            </FlexBox>
+ 
+            <VBox class="sapUiSmallMargin">
+            <Label  text="1.How Old are You?" class="age"/>
+            <Input placeholder="In Years" width="30rem" type="Number" />
+            </VBox>
+ 
+            <VBox class="sapUiSmallMargin">
+                <Label text="2.Please Select Your Gender" labelFor="GroupA" />
+                <RadioButtonGroup id="GroupA">
+                    <RadioButton class="check" text="Male" selected="true" />
+                    <RadioButton text="Female" />
+                    <RadioButton text="Other" />
+                </RadioButtonGroup>
+       
+                <Label text="3.Please let us know your current body temparture in degree fahrenheit" labelFor="GroupA" />
+                <RadioButtonGroup id="GroupB">
+                    <RadioButton text="Normal (96° F -98°6F)" selected="true" />
+                    <RadioButton text="Fever (98°6F-102°F)"/>
+                    <RadioButton text="High (>102° F)" />
+                    <RadioButton text="Don't know" />
+                </RadioButtonGroup>
+            </VBox>
+ 
+            <VBox class="sapUiSmallMargin">
+            <Label text="4.Are You Experiencing any of symptoms below(mark all those applicable)"/>
+              <CheckBox text="Dry Cough"/>
+              <CheckBox text="Loss or Diminshed sense of smell "/>
+              <CheckBox text="Sore Throat"  />
+              <CheckBox text="Weakness" />
+              <CheckBox text="Change in Appetite" />
+              <CheckBox text="other"/>
+
+            <Label text="5. Additionally, please verify if you are experiencing any of the symptoms below(Mark all those applicable)"/>
+                <CheckBox text="Moderate to Severe Cough" />
+                <CheckBox text="Feeling Breathless" />
+                <CheckBox text="Difficulty in breathing" />
+                <CheckBox text="Drowsiness" />
+                <CheckBox text="Persistent pain and pressure in chest" />
+                <CheckBox text="Severe Weakness" />
+                <CheckBox text="None of these" />
+            </VBox>
+ 
+             <footer >
+                <Bar>
+                <contentMiddle>
+                <Button text="Submit" press="onSubmit" type="Emphasized" width="50%" 
+                        icon="sap-icon://accounting-document-verification" enabled="true" 
+                    />
+                </contentMiddle>
+                </Bar>
+            </footer>
+   </Page>
+</mvc:View>

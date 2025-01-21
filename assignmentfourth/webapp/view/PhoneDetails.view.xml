@@ -1,0 +1,56 @@
+<mvc:View controllerName="assignmentfourth.controller.PhoneDetails"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+
+    <Page title="{i18n>title}">
+        <content>
+            <VBox alignItems="Center" class="sapUiLargeMarginTop">
+
+                <Title text=""></Title>
+
+                <Text text="Please enter a cell phone number in the event an EXLTUBE employee needs to call" class="sapUiLargeMarginTop"></Text>
+
+                <HBox class="sapUiLargeMarginTop sapUiSmallMarginBottom" alignItems="Center">
+                    <Label text="Cell Phone" width="100px"/>
+                    <!-- First part of phone number -->
+                    <Input id="phoneFirst"
+                           maxLength="3"
+                           width="60px"
+                           type="Text"
+                           placeholder="XXX"
+                           liveChange=".onPhoneChange"
+                           class="sapUiTinyMarginEnd"/>
+                    <Text text="-" class="sapUiTinyMarginEnd"/>
+                   
+                    <!-- Second part of phone number -->
+                    <Input id="phoneSecond"
+                           maxLength="3"
+                           width="60px"
+                           type="Text"
+                           placeholder="XXX"
+                           liveChange=".onPhoneChange"
+                           class="sapUiTinyMarginEnd"/>
+                    <Text text="-" class="sapUiTinyMarginEnd"/>
+                   
+                    <!-- Third part of phone number -->
+                    <Input id="phoneThird"
+                           maxLength="4"
+                           width="70px"
+                           type="Text"
+                           placeholder="XXXX"
+                           liveChange=".onPhoneChange"/>
+                </HBox>
+
+                <HBox >
+                    <Button press="continue" text="Continue" class="sapUiSmallMargin" width="100px"></Button>
+                    <Button press="back" text="Back" class="sapUiSmallMargin" width="100px"></Button>
+                </HBox>
+
+                <Button press="goToWelcome" text="Start Over" width="100px"></Button>
+
+
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

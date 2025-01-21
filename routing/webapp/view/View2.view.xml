@@ -1,0 +1,15 @@
+<mvc:View controllerName="routing.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page1" title="{i18n>title}">
+    <content>
+        <!-- <Text text="this is a view2"></Text>
+        <Button text="navigate to first page" press="onNavToView1"></Button> -->
+        <Text text="value coming from view 1"></Text>
+        <Input editable="false" class="" id="output"/>
+        <Button text="navigate to First page" press="onNavToView1"></Button>
+        <Button text="back" press="onBack"></Button>
+    </content>
+    
+    </Page>
+</mvc:View>

@@ -1,0 +1,39 @@
+<mvc:View controllerName="assignmentfourth.controller.TrailerType"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+
+    <Page title="{i18n>title}">
+        <content>
+            <VBox alignItems="Center" class="sapUiLargeMarginTop">
+                <Title text="screen-5"></Title>
+
+                <Text text="Please select your trailer type"></Text>
+
+                <HBox width="40%" justifyContent="SpaceAround" class="sapUiSmallMargin">
+                    <Button press="traileroption" text="48'" width="150px"></Button>
+                    <Button text="Side Kites" width="150px"></Button>
+                </HBox>
+                
+                <HBox width="40%" justifyContent="SpaceAround" class="sapUiSmallMargin">
+                    <Button press="traileroption" text="53'" width="150px"></Button>
+                    <Button text="Spread Axle" width="150px"></Button>
+                </HBox>
+
+                <HBox width="40%" justifyContent="SpaceAround" class="sapUiSmallMargin">
+                    <Button press="traileroption" text="California Spread" width="150px"></Button>
+                    <Button text="Step deck" width="150px"></Button>
+                </HBox>
+
+                <HBox width="40%" justifyContent="SpaceAround" class="sapUiSmallMargin">
+                    <Button press="traileroption" text="Conestog" width="150px"></Button>
+                    <Button text="Other" width="150px"></Button>
+                </HBox>
+
+                <Button press="back" text="Back" width="100px" class="sapUiSmallMargin"></Button>
+
+                <Button press="goHome" class="" text="Start Over" width="100px"></Button>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

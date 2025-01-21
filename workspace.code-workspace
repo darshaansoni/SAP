@@ -1,0 +1,33 @@
+{"folders":[
+        {
+            "path": "assignmentfirst"
+        },
+        {
+            "name": "routing",
+            "path": "routing"
+        },
+        {
+            "name": "assignmenttwo",
+            "path": "assignmenttwo"
+        },
+        {
+            "name": "demoproject",
+            "path": "demoproject"
+        },
+        {
+            "name": "assignmentfourth",
+            "path": "assignmentfourth"
+        },
+        {
+            "name": "assignmentthree",
+            "path": "assignmentthree"
+        },
+        {
+            "name": "assignmentfifth",
+            "path": "assignmentfifth"
+        }
+    ],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "assignmenttwo"
+    }
+}

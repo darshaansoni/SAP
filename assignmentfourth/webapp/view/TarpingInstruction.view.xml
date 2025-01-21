@@ -1,0 +1,20 @@
+<mvc:View   xmlns:mvc="sap.ui.core.mvc" 
+            xmlns:core="sap.ui.core" 
+            xmlns="sap.m" 
+            controllerName="assignmentfourth.controller.TarpingInstruction">
+
+<Page title="{i18n>title}">
+<content>
+<VBox alignItems="Center" class="sapUiLargeMarginTop">
+<Title text="screen-6"/>
+<Text text="Listed bellow are the customer's requirements regarding traping." class="sapUiLargeMargin"/>
+<Text text="(Yha p kuch instruction ainge)"/>
+<Title text="All traping must be done outside weather permitting." class="sapUiLargeMargin"/>
+<HBox>
+<Button press="continue" text="yes, I Understand" width="150px" class="sapUiSmallMargin"/>
+<Button press="back" text="Back" width="150px" class="sapUiSmallMargin"/>
+</HBox>
+</VBox>
+</content>
+</Page>
+</mvc:View>

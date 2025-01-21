@@ -1,0 +1,64 @@
+<mvc:View
+   controllerName="com.exltube.checkin.controller.Pickup"
+   xmlns:mvc="sap.ui.core.mvc"
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core">
+   <Page showHeader="false">
+      <VBox alignItems="Center" justifyContent="Center" class="sapUiMediumMargin">
+         <Title text="Please enter the shipment ID number for the load you are picking up." 
+                wrapping="true" 
+                class="sapUiMediumMarginBottom"/>
+         <Text text="This is an eight-digit number that can be found on your shipment tender." 
+               class="sapUiMediumMarginBottom"/>
+         
+         <VBox width="100%" class="sapUiMediumMargin">
+            <Label text="Shipment ID" required="true"/>
+            <Input
+               id="shipmentInput"
+               maxLength="8"
+               type="Number"
+               placeholder="Enter 8-digit shipment ID"
+               liveChange=".onShipmentInputChange"
+               submit=".onContinue"
+               class="sapUiSmallMarginBottom"/>
+               
+            <Button
+               text="Continue"
+               press=".onContinue"
+               type="Emphasized"
+               enabled="{viewModel>/isContinueEnabled}"
+               width="100%"
+               class="sapUiSmallMarginBottom"/>
+               
+            <Button
+               text="I don't have my shipment ID number."
+               press=".onNoShipmentId"
+               type="Emphasized"
+               width="100%"
+               class="sapUiSmallMarginBottom"/>
+               
+            <Button
+               text="Back"
+               press=".onBack"
+               type="Emphasized"
+               width="100%"
+               class="sapUiTinyMarginBottom"/>
+               
+            <Button
+               text="Request help"
+               press=".onRequestHelp"
+               type="Emphasized"
+               width="100%"/>
+         </VBox>
+      </VBox>
+      
+      <MessagePopover
+         items="{messages>/}"
+         id="messagePopover">
+         <MessageItem
+            type="{messages>type}"
+            title="{messages>title}"
+            description="{messages>description}"/>
+      </MessagePopover>
+   </Page>
+</mvc:View>

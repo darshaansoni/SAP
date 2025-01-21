@@ -1,0 +1,27 @@
+<mvc:View controllerName="assignmentfour.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    <Page showHeader="false">
+      <VBox alignItems="Center" justifyContent="Center" class="sapUiMediumMargin">
+         <Title text="Welcome to EXLTUBE!" class="sapUiMediumMarginBottom"/>
+         <Text text="Please start the check-in process by selecting one of the options below." class="sapUiMediumMarginBottom"/>
+         
+         <HBox justifyContent="SpaceBetween" width="50%" class="sapUiMediumMargin">
+            <Button
+               text="I am picking up a shipment from EXLTUBE."
+               press=".onPickupPress"
+               type="Emphasized"
+               
+               class="sapUiTinyMarginEnd"
+               />
+            <Button
+               text="I am dropping off a delivery at EXLTUBE."
+               press=".onDropoffPress"
+               type="Emphasized"
+               />
+         </HBox>
+      </VBox>
+   </Page>
+    </Page>
+</mvc:View>

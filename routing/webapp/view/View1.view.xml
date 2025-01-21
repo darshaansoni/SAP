@@ -1,0 +1,14 @@
+<mvc:View controllerName="routing.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    <content>
+        <!-- <Text text="this is a view1"></Text>
+        <Button text="navigate to second page" press="onNavToView2"></Button> -->
+        <Text text="Input :"></Text>
+        <Input id="input" />
+        <Button text="navigate to second page" press="onNavToView2"></Button>
+    </content>
+    
+    </Page>
+</mvc:View>

@@ -1,0 +1,79 @@
+<!-- <mvc:View controllerName="assignmentfifth.controller.MainView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    </Page>
+</mvc:View> -->
+
+<mvc:View
+  controllerName="assignmentfifth.controller.MainView"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:f="sap.f">
+  
+  <Page title="EMPLOYEE DASHBOARD">
+    <content>
+      <!-- Filter Bar -->
+      <Toolbar>
+        <Input
+          id="employeeIdFilter"
+          placeholder="Employee ID"
+          width="200px"/>
+        <Input
+          id="cityFilter"
+          placeholder="City"
+          width="200px"/>
+        <Input
+          id="countryFilter"
+          placeholder="Country"
+          width="200px"/>
+        <Input
+          id="regionFilter"
+          placeholder="Region"
+          width="200px"/>
+        <Button
+          text="Go"
+          type="Emphasized"
+          press=".onSearch"/>
+      </Toolbar>
+      
+      <!-- Table -->
+      <Table
+        id="employeeTable"
+        items="{/Employees}">
+        <columns>
+          <Column>
+            <Text text="Employee ID"/>
+          </Column>
+          <Column>
+            <Text text="Name (First + Last)"/>
+          </Column>
+          <Column>
+            <Text text="Title"/>
+          </Column>
+          <Column>
+            <Text text="Country"/>
+          </Column>
+          <Column>
+            <Text text="Hire Date"/>
+          </Column>
+        </columns>
+        <items>
+          <ColumnListItem>
+            <cells>
+              <Text text="{EmployeeID}"/>
+              <Text text="{FirstName} {LastName}"/>
+              <Text text="{Title}"/>
+              <Text text="{Country}"/>
+              <Text text="{
+                path: 'HireDate',
+                formatter: '.formatDate'
+              }"/>
+            </cells>
+          </ColumnListItem>
+        </items>
+      </Table>
+    </content>
+  </Page>
+</mvc:View>
+

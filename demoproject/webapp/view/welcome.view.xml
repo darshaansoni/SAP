@@ -1,0 +1,23 @@
+<mvc:View
+    controllerName="demoproject.controller.welcome"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <List
+                headerText="Employee"
+                items="{/Employees}"
+            >
+                <StandardListItem
+                    title="{Name}"
+                    
+                />
+            </List>
+            <Button text="click me " press="onPress"></Button>
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,69 @@
+{
+    "EmpData":[
+        {
+            "EmployeeID": 1,
+            "FirstName": "Darby",
+            "LastName": "Blew",
+            "Gender": "Female",
+            "Grade": "LLBG",
+            "Designation": "Registered Nurse",
+            "Skillset": "HW/SW integration",
+            "Dateofjoining": "3/31/2024",
+            "Dateofbirth": "6/25/2024",
+            "Fathersname": "Katine",
+            "MotherMaidenname": "Laffoley-Lane",
+            "Phonenumber": "784-411-3842",
+            "Alternativenumber": "368-695-4675",
+            "Emailaddress": "klaffoleylane0@ocn.ne.jp"
+        },
+        {
+            "EmployeeID": 2,
+            "FirstName": "Marlon",
+            "LastName": "Pauncefoot",
+            "Gender": "Male",
+            "Grade": "MMUN",
+            "Designation": "Data Coordinator",
+            "Skillset": "Angel LMS",
+            "Dateofjoining": "11/15/2024",
+            "Dateofbirth": "12/22/2024",
+            "Fathersname": "Tudor",
+            "MotherMaidenname": "Jon",
+            "Phonenumber": "191-439-6262",
+            "Alternativenumber": "325-969-9807",
+            "Emailaddress": "tjon1@example.com"
+        },
+        {
+            "EmployeeID": 3,
+            "FirstName": "Joly",
+            "LastName": "Andreotti",
+            "Gender": "Female",
+            "Grade": "MP00",
+            "Designation": "Professor",
+            "Skillset": "Biblical Studies",
+            "Dateofjoining": "7/24/2024",
+            "Dateofbirth": "7/17/2024",
+            "Fathersname": "Rozanne",
+            "MotherMaiden name": "Whithalgh",
+            "Phonenumber": "492-668-1289",
+            "Alternativenumber": "391-822-8026",
+            "Emailaddress": "rwhithalgh2@deliciousdays.com"
+        },
+        {
+            "EmployeeID": 4,
+            "FirstName": "Rogers",
+            "LastName": "Greser",
+            "Gender": "Male",
+            "Grade": "RKPC",
+            "Designation": "Environmental Specialist",
+            "Skillset": "PLC Allen Bradley",
+            "Dateofjoining": "5/18/2024",
+            "Dateofbirth": "2/26/2024",
+            "Fathersname": "Chrotoem",
+            "MotherMaidenname": "Staite",
+            "Phonenumber": "326-154-0696",
+            "Alternativenumber": "848-257-0109",
+            "Emailaddress": "cstaite3@opensource.org"
+        }
+    ]
+}
+ 

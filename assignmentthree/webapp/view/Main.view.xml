@@ -1,0 +1,158 @@
+<!-- <mvc:View controllerName="assignmentthree.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    </Page>
+</mvc:View> -->
+<mvc:View controllerName="assignmentthree.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns:forms="sap.ui.layout.form"
+    xmlns:layout="sap.ui.layout"
+    xmlns="sap.m">
+ 
+    <SplitApp id="SplitApp"
+        initialMaster="master"
+        initialDetail="detail">
+       
+        <detailPages>
+            <Page
+                id="detail"
+                title="Personal Detail"
+                backgroundDesign= "Solid" >
+                <FlexBox justifyContent="SpaceBetween">
+                     <layout:VerticalLayout class="sapUiLargeMargin">
+                        <layout:HorizontalLayout class="sapUiContentPadding">
+                            <Label text="First Name: " />
+                            <Text id="firstName" text=""/>
+                        </layout:HorizontalLayout>
+ 
+                        <layout:HorizontalLayout class="sapUiContentPadding">
+                            <Label text="Last Name:" />
+                            <Text id="lastName" text=""/>
+                        </layout:HorizontalLayout>
+ 
+                         <layout:HorizontalLayout class="sapUiContentPadding">
+                            <Label text="Grade:" />
+                            <Text id="grade" text=""/>
+                        </layout:HorizontalLayout>
+ 
+                       
+                    </layout:VerticalLayout>
+ 
+                    <layout:VerticalLayout class="sapUiLargeMargin">
+                        <layout:HorizontalLayout class="sapUiContentPadding">
+                            <Label text="Gender: " />
+                            <Text id="gender" text=""/>
+                        </layout:HorizontalLayout>
+ 
+                        <layout:HorizontalLayout class="sapUiContentPadding">
+                            <Label text="Designation:" />
+                            <Text id="designation" text=""/>
+                        </layout:HorizontalLayout>
+ 
+                        <layout:HorizontalLayout class="sapUiContentPadding">
+                            <Label text="EmpID:" />
+                            <Text id="empId" text=""/>
+                        </layout:HorizontalLayout>
+                    </layout:VerticalLayout>
+                </FlexBox>
+                <Title text="Details" class="sapUiSmallMargin"/>
+                <IconTabBar
+                    id="iconTabHeader"
+                    selectedKey="invalidKey"
+                    backgroundDesign="Transparent">
+                   
+                    <items>
+                        <IconTabFilter text="Personal" key="personal" >
+                          <layout:VerticalLayout>
+                         <layout:HorizontalLayout id="personaldob" class="sapUiContentPadding">
+                            <Label text="Date Of Birth:"  />
+                            <Text id="dob" text=""/>
+                        </layout:HorizontalLayout>
+ 
+                         <layout:HorizontalLayout id="personalFatherName" class="sapUiContentPadding" >
+                            <Label text="Father Name:" />
+                            <Text id="fatherName" text=""/>
+                        </layout:HorizontalLayout>
+ 
+                         <layout:HorizontalLayout id="personalMaidname" class="sapUiContentPadding" >
+                            <Label text="Mother Maidname:" />
+                            <Text id="mothermaidname" text=""/>
+                        </layout:HorizontalLayout>
+                        </layout:VerticalLayout>
+                       
+                        </IconTabFilter>
+ 
+                        <IconTabFilter text="Content"  key="content">
+ 
+                        <layout:VerticalLayout>
+                        <layout:HorizontalLayout id="contactPhone" class="sapUiContentPadding" >
+                            <Label text="Contact Number:"  />
+                            <Text id="contact" text=""/>
+                        </layout:HorizontalLayout>
+ 
+                         <layout:HorizontalLayout id="contactAlternate" class="sapUiContentPadding" >
+                            <Label text="Alternate Numer:" />
+                            <Text id="alternate" text=""/>
+                        </layout:HorizontalLayout>
+ 
+                         <layout:HorizontalLayout id="contactEmail" class="sapUiContentPadding" >
+                            <Label text="Email:" />
+                            <Text id="email" text=""/>
+                        </layout:HorizontalLayout>
+                        </layout:VerticalLayout>
+                        </IconTabFilter>
+ 
+ 
+                        <IconTabFilter text="Office"  key="office">
+                         <layout:VerticalLayout>
+                         <layout:HorizontalLayout id="officeDesignation" class="sapUiContentPadding" >
+                            <Label text="Designation:"  />
+                            <Text id="odesignation" text=""/>
+                        </layout:HorizontalLayout>
+ 
+                         <layout:HorizontalLayout id="officeSkill" class="sapUiContentPadding" >
+                            <Label text="Skill Set:" />
+                            <Text id="skillset" text=""/>
+                        </layout:HorizontalLayout>
+ 
+                         <layout:HorizontalLayout id="officedoj" class="sapUiContentPadding" >
+                            <Label text="Date of Joining:" />
+                            <Text id="doj" text=""/>
+                        </layout:HorizontalLayout>
+                        </layout:VerticalLayout>
+                         </IconTabFilter>
+                    </items>
+                </IconTabBar>
+                <layout:VerticalLayout class="sapUiContentPadding" >
+ 
+                </layout:VerticalLayout>
+            </Page>
+        </detailPages>
+        <masterPages>
+            <Page >
+                    <subHeader>
+                        <OverflowToolbar>
+                            <SearchField
+                                id="searchField"
+                                liveChange="onSearch"
+                                width="80%"
+                                placeholder="Search for..."/>
+                        </OverflowToolbar>
+                    </subHeader>
+                    <List
+                    id="idList"
+                    items="{LocalData>/EmpData}"
+                    selectionChange="itemChange"
+                    includeItemInSelection="true" mode="SingleSelectMaster">
+                    <StandardListItem
+                        title="{LocalData>FirstName}"
+                        description="{LocalData>Designation}"/>
+                </List>
+            </Page>
+        </masterPages>  
+    </SplitApp>
+</mvc:View>
+ 
+ 
