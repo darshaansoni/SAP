@@ -20,7 +20,12 @@ sap.ui.define([
             if (firstPart.length === 3 && secondPart.length === 3 && thirdPart.length === 4) {
                 const fullPhoneNumber = `${firstPart}-${secondPart}-${thirdPart}`;
                 console.log("Phone Number:", fullPhoneNumber);
+                
                 this.oRouter.navTo("RouteTrailerType");
+                this.byId("phoneFirst").setValue(" ");
+                this.byId("phoneSecond").setValue(" ");
+                this.byId("phoneThird").setValue(" ");
+               
             } else {
                 MessageBox.error("Please enter a valid 10-digit phone number");
             }

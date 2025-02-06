@@ -18,6 +18,7 @@ sap.ui.define([
         onInit() {
         },
         itemChange: function(oEvent) {
+            this.getView().byId("detail").setVisible(true);
             var oSelectedItem = oEvent.getParameter("listItem");
             if (oSelectedItem) {
                 var oContext = oSelectedItem.getBindingContext("LocalData");

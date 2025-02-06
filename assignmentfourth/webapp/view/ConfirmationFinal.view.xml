@@ -1,0 +1,21 @@
+<mvc:View controllerName="assignmentfourth.controller.ConfirmationFinal"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+
+    <Page title="{i18n>title}">
+        <content>
+            <VBox alignItems="Center" class="sapUiLargeMarginTop">
+
+                <Title text="screen-8"></Title>
+
+                <Title text="Thank you for checking in at EXLTUBE" class="sapUiSmallMarginBottom"></Title>
+
+                <Text text="Please return to your truck and wait until further instructed"></Text>
+
+                <Button text="Main Menu" class="sapUiSmallMargin" press="continue"></Button>
+
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

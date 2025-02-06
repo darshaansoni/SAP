@@ -46,8 +46,8 @@ sap.ui.define([
                     randomNumber+=num
                 }
                 const input=this.byId("ProposedNumber").getValue()
-                let random=input+Math.floor(randomNumber*100000)
-                this.byId("DocumentNumber").setValue(random)
+                // let random=input+Math.floor(randomNumber*100000)
+                // this.byId("DocumentNumber").setValue(random)
                 this.byId("documentLabel").setVisible(true)
                 this.byId("DocumentNumber").setVisible(true)
  

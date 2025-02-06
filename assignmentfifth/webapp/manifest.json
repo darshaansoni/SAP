@@ -95,12 +95,52 @@
                     "target": [
                         "TargetMainView"
                     ]
+                },
+                {
+                    "name": "RouteEmpDetails",
+                    "pattern": "NavToEmpDetails({employeeId})",
+                    "target": [
+                        "TargetEmpDetails"
+                    ]
+                },
+                {
+                    "name": "RouteEmpDetails",
+                    "pattern": "NavToEmpDetails({employeeId})",
+                    "target": [
+                        "TargetEmpDetails"
+                    ]
+                },
+                {
+                    "name": "RouteOrderDetails",
+                    "pattern": "NavToOrderDetails({orderId})",
+                    "target": [
+                        "TargetOrderDetails"
+                    ]
+                },
+                {
+                    "name": "RouteProductDetails",
+                    "pattern": "NavToProductDetails({productId})",
+                    "target": [
+                        "TargetProductDetails"
+                    ]
                 }
             ],
             "targets": {
                 "TargetMainView": {
                     "id": "MainView",
                     "name": "MainView"
+                },
+                "TargetEmpDetails": {
+                    "id": "EmpDetails",
+                    "name": "EmpDetails"
+                },
+                "TargetOrderDetails": {
+                    "id": "OrderDetails",
+                    "name": "OrderDetails"
+                },
+                "TargetProductDetails": {
+                    "id": "ProductDetails",
+                    "name": "ProductDetails"
                 }
             }
         },

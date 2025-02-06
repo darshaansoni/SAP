@@ -29,8 +29,8 @@ sap.ui.define([
 
         onDropoffPress: function () {
             // Navigate to dropoff flow
-            var oRouter = this.getOwnerComponent().getRouter();
-            oRouter.navTo("dropoff");
+            // var oRouter = this.getOwnerComponent().getRouter();
+            this.oRouter.navTo("RouteInbound");
         }
     });
 });

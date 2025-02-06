@@ -107,6 +107,34 @@
                     "target": [
                         "TargetTrailerType"
                     ]
+                },
+                {
+                    "name": "RouteTarpingInstruction",
+                    "pattern": "navToTarpingInstruction",
+                    "target": [
+                        "TargetTarpingInstruction"
+                    ]
+                },
+                {
+                    "name": "RoutePoliciesDetails",
+                    "pattern": "navToPoliciesDetails",
+                    "target": [
+                        "TargetPoliciesDetails"
+                    ]
+                },
+                {
+                    "name": "RouteConfirmationFinal",
+                    "pattern": "navToConfirmationFinal",
+                    "target": [
+                        "TargetConfirmationFinal"
+                    ]
+                },
+                {
+                    "name": "RouteInbound",
+                    "pattern": "navToInbound",
+                    "target": [
+                        "TargetInbound"
+                    ]
                 }
             ],
             "targets": {
@@ -129,6 +157,22 @@
                 "TargetTrailerType": {
                     "id": "TrailerType",
                     "name": "TrailerType"
+                },
+                "TargetTarpingInstruction": {
+                    "id": "TarpingInstruction",
+                    "name": "TarpingInstruction"
+                },
+                "TargetPoliciesDetails": {
+                    "id": "PoliciesDetails",
+                    "name": "PoliciesDetails"
+                },
+                "TargetConfirmationFinal": {
+                    "id": "ConfirmationFinal",
+                    "name": "ConfirmationFinal"
+                },
+                "TargetInbound": {
+                    "id": "Inbound",
+                    "name": "Inbound"
                 }
             }
         },

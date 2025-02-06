@@ -1,0 +1,19 @@
+<mvc:View controllerName="assignmenteight.controller.firstScreen"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+     
+    <Page id="page" title="{i18n>title}">
+     <OverflowToolbar>
+        <ToolbarSpacer/>
+        <Select id="languageSelect">
+            <items>
+                <core:Item key="EN" text="English"/>
+                <core:Item key="DE" text="German"/>
+                <core:Item key="FR" text="French"/>
+                <core:Item key="ES" text="Spanish"/>
+            </items>
+        </Select>
+        <Text id="versionText" text="{/appVersion}"/>
+    </OverflowToolbar>
+    </Page>
+</mvc:View>

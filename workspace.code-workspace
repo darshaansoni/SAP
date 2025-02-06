@@ -25,6 +25,14 @@
         {
             "name": "assignmentfifth",
             "path": "assignmentfifth"
+        },
+        {
+            "name": "assignmentseventh",
+            "path": "assignmentseventh"
+        },
+        {
+            "name": "assignmenteight",
+            "path": "assignmenteight"
         }
     ],
     "settings": {

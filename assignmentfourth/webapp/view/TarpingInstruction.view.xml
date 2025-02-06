@@ -8,7 +8,7 @@
 <VBox alignItems="Center" class="sapUiLargeMarginTop">
 <Title text="screen-6"/>
 <Text text="Listed bellow are the customer's requirements regarding traping." class="sapUiLargeMargin"/>
-<Text text="(Yha p kuch instruction ainge)"/>
+<Text text="Some instructions ......"/>
 <Title text="All traping must be done outside weather permitting." class="sapUiLargeMargin"/>
 <HBox>
 <Button press="continue" text="yes, I Understand" width="150px" class="sapUiSmallMargin"/>

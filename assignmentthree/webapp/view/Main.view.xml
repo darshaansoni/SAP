@@ -19,6 +19,7 @@
             <Page
                 id="detail"
                 title="Personal Detail"
+                visible="false"
                 backgroundDesign= "Solid" >
                 <FlexBox justifyContent="SpaceBetween">
                      <layout:VerticalLayout class="sapUiLargeMargin">

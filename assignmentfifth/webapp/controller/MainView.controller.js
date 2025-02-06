@@ -1,57 +1,75 @@
-// sap.ui.define([
-//     "sap/ui/core/mvc/Controller"
-// ], (Controller) => {
-//     "use strict";
-
-//     return Controller.extend("assignmentfifth.controller.MainView", {
-//         onInit() {
-//         }
-//     });
-// });
-
 sap.ui.define([
-    "sap/ui/core/mvc/Controller",
-    "sap/ui/model/json/JSONModel",
-    "sap/ui/model/Filter",
-    "sap/ui/model/FilterOperator"
-  ], function(Controller, JSONModel, Filter, FilterOperator) {
-    "use strict";
-    
-    return Controller.extend("assignmentfifth.controller.MainView", {
-      onInit: function() {
-        // Initialize OData model
-        var oModel = new sap.ui.model.odata.v2.ODataModel("https://services.odata.org/V2/Northwind/Northwind.svc/");
-        this.getView().setModel(oModel);
-      },
+  "sap/ui/core/mvc/Controller",
+  "sap/ui/model/Filter",
+  "sap/ui/model/FilterOperator"
+], function (Controller, Filter, FilterOperator) {
+  "use strict";
+
+  return Controller.extend("assignmentfifth.controller.MainView", {
       
-      formatDate: function(date) {
-        if (!date) return "";
-        return new Date(date).toLocaleDateString();
+      onInit: function () {
+          // You don't need to initialize anything here since 
+          // OData connection is handled in manifest.json
+          this.oRouter = sap.ui.core.UIComponent.getRouterFor(this)
       },
-      
-      onSearch: function() {
-        var aFilters = [];
-        var employeeId = this.byId("employeeIdFilter").getValue();
-        var city = this.byId("cityFilter").getValue();
-        var country = this.byId("countryFilter").getValue();
-        var region = this.byId("regionFilter").getValue();
-        
-        if (employeeId) {
-          aFilters.push(new Filter("EmployeeID", FilterOperator.EQ, employeeId));
-        }
-        if (city) {
-          aFilters.push(new Filter("City", FilterOperator.Contains, city));
-        }
-        if (country) {
-          aFilters.push(new Filter("Country", FilterOperator.Contains, country));
-        }
-        if (region) {
-          aFilters.push(new Filter("Region", FilterOperator.Contains, region));
-        }
-        
-        var oTable = this.byId("employeeTable");
-        var oBinding = oTable.getBinding("items");
-        oBinding.filter(aFilters);
+
+      formatter: {
+          dateFormatter: function(date) {
+              if (!date) return "";
+              var oDate = new Date(date);
+              return oDate.toLocaleDateString();
+          }
+      },
+
+      onSearch: function(oEvent) {
+          // Get the table reference
+          var oTable = this.byId("employeeTable");
+          
+          // Get filter bar
+          var oFilterBar = oEvent.getSource();
+          
+          // Get values from filter fields
+          var sEmployeeID = oFilterBar.getFilterGroupItems()[0].getControl().getValue();
+          console.log(sEmployeeID);
+          var sCity = oFilterBar.getFilterGroupItems()[1].getControl().getValue();
+          var sCountry = oFilterBar.getFilterGroupItems()[2].getControl().getValue();
+          var sRegion = oFilterBar.getFilterGroupItems()[3].getControl().getValue();
+          
+          // Create filters
+          var aFilters = [];
+          
+          // Add filters only if value exists
+          if (sEmployeeID) {
+              aFilters.push(new Filter("EmployeeID", FilterOperator.EQ, sEmployeeID));
+          }
+          if (sCity) {
+              aFilters.push(new Filter("City", FilterOperator.EQ, sCity));
+          }
+          if (sCountry) {
+              aFilters.push(new Filter("Country", FilterOperator.EQ, sCountry));
+          }
+          if (sRegion) {
+              aFilters.push(new Filter("Region", FilterOperator.EQ, sRegion));
+          }
+          
+          // Get binding and apply filters
+          var oBinding = oTable.getBinding("items");
+          oBinding.filter(aFilters);
+      },
+      onPressColumn: function(oEvent){
+        var oItem = oEvent.getSource();
+        var oBindingContext = oItem.getBindingContext();
+        var employeeId = oBindingContext.getProperty("EmployeeID");
+
+        // alert("heyloo")
+       
+        // Navigate to detail page with employee ID
+        this.oRouter.navTo("RouteEmpDetails",{
+            employeeId: employeeId
+        });
+    },
+    next:function(){
+        //   this.oRouter.navTo("RouteEmpDetails");
       }
-    });
   });
+});

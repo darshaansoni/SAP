@@ -9,71 +9,69 @@
   controllerName="assignmentfifth.controller.MainView"
   xmlns:mvc="sap.ui.core.mvc"
   xmlns="sap.m"
-  xmlns:f="sap.f">
+  xmlns:fb="sap.ui.comp.filterbar">
   
-  <Page title="EMPLOYEE DASHBOARD">
-    <content>
-      <!-- Filter Bar -->
-      <Toolbar>
-        <Input
-          id="employeeIdFilter"
-          placeholder="Employee ID"
-          width="200px"/>
-        <Input
-          id="cityFilter"
-          placeholder="City"
-          width="200px"/>
-        <Input
-          id="countryFilter"
-          placeholder="Country"
-          width="200px"/>
-        <Input
-          id="regionFilter"
-          placeholder="Region"
-          width="200px"/>
-        <Button
-          text="Go"
-          type="Emphasized"
-          press=".onSearch"/>
-      </Toolbar>
-      
-      <!-- Table -->
-      <Table
-        id="employeeTable"
-        items="{/Employees}">
-        <columns>
-          <Column>
-            <Text text="Employee ID"/>
-          </Column>
-          <Column>
-            <Text text="Name (First + Last)"/>
-          </Column>
-          <Column>
-            <Text text="Title"/>
-          </Column>
-          <Column>
-            <Text text="Country"/>
-          </Column>
-          <Column>
-            <Text text="Hire Date"/>
-          </Column>
-        </columns>
-        <items>
-          <ColumnListItem>
-            <cells>
-              <Text text="{EmployeeID}"/>
-              <Text text="{FirstName} {LastName}"/>
-              <Text text="{Title}"/>
-              <Text text="{Country}"/>
-              <Text text="{
-                path: 'HireDate',
-                formatter: '.formatDate'
-              }"/>
-            </cells>
-          </ColumnListItem>
-        </items>
-      </Table>
-    </content>
+  <Page title="Employee List">
+    <fb:FilterBar search=".onSearch" useToolbar="false">
+      <fb:filterGroupItems>
+        <fb:FilterGroupItem name="EmployeeID" label="Employee ID" groupName="Group1">
+          <fb:control>
+            <Input type="Text" />
+          </fb:control>
+        </fb:FilterGroupItem>
+        <fb:FilterGroupItem name="City" label="City" groupName="Group1">
+          <fb:control>
+            <Input type="Text" />
+          </fb:control>
+        </fb:FilterGroupItem>
+        <fb:FilterGroupItem name="Country" label="Country" groupName="Group1">
+          <fb:control>
+            <Input type="Text" />
+          </fb:control>
+        </fb:FilterGroupItem>
+        <fb:FilterGroupItem name="Region" label="Region" groupName="Group1">
+          <fb:control>
+            <Input type="Text" />
+          </fb:control>
+        </fb:FilterGroupItem>
+      </fb:filterGroupItems>
+    </fb:FilterBar>
+
+    <!-- <Button text="next" press="next"></Button> -->
+    
+    <Table id="employeeTable" items="{/Employees}">
+      <columns>
+        <Column>
+          <Text text="Employee ID" />
+        </Column>
+        <Column>
+          <Text text="Name" />
+        </Column>
+        <Column>
+          <Text text="Title" />
+        </Column>
+        <Column>
+          <Text text="Country" />
+        </Column>
+        <Column>
+          <Text text="Hire Date" />
+        </Column>
+      </columns>
+      <items>
+        <ColumnListItem type="Navigation" press=".onPressColumn" >
+          <cells>
+            <Text text="{EmployeeID}" />
+            <Text text="{= ${FirstName} + ' ' + ${LastName}}" />
+            <Text text="{Title}" />
+            <Text text="{Country}" />
+            <Text text="{
+              path: 'HireDate',
+              formatter: '.formatter.dateFormatter'
+            }" />
+          </cells>
+        </ColumnListItem>
+      </items>
+    </Table>
   </Page>
 </mvc:View>
-
+ 

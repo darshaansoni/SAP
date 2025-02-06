@@ -1,0 +1,32 @@
+<mvc:View controllerName="assignmentfourth.controller.PoliciesDetails"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+
+    <Page title="{i18n>title}">
+        <content>
+            <VBox alignItems="Center" class="sapUiLargeMarginTop">
+
+                <Title text="screen-7"></Title>
+
+                <VBox width="40%" class="sapUiLargeMarginBottom">
+                    <Title text="The following personal protective equipment is required:-" class="sapUiSmallMarginBottom"></Title>
+                    <Text text="- Hardest"  class="sapUiSmallMarginBottom"></Text>
+                    <Text text="- Safety Glasses"></Text>
+                </VBox>
+
+                <VBox width="40%">
+                    <Title text="Please not the following policies:-" class="sapUiSmallMarginBottom"></Title>
+                    <Text text="- Drivers should stay in their trucks at all the time unless otherwise instructed"  class="sapUiSmallMarginBottom"></Text>
+                    <Text text="- 5mph speed limit"  class="sapUiSmallMarginBottom"></Text>
+                    <Text text="- Must honk before entering bag"  class="sapUiSmallMarginBottom"></Text>
+                </VBox>
+
+                <HBox >
+                    <Button press="continue" text="yes, I Understand" width="150px" class="sapUiSmallMargin"></Button>
+                    <Button press="back" text="Back" width="150px" class="sapUiSmallMargin"></Button>
+                </HBox>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

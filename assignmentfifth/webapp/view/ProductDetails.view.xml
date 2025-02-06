@@ -1,0 +1,59 @@
+<mvc:View xmlns:form="sap.ui.layout.form" xmlns:smartform="sap.ui.comp.smartform" xmlns:filterbar="sap.ui.comp.filterbar" xmlns:layout="sap.ui.layout" xmlns:uxap="sap.uxap" 
+    controllerName="assignmentfifth.controller.ProductDetails"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page title="{i18n>title}">
+
+        <form:SimpleForm>
+            <form:content> 
+                
+                <Toolbar >   
+                    <ToolbarSpacer />
+                        <Title id="productId" text="Product Id" ></Title>
+                    <ToolbarSpacer />
+                </Toolbar>
+
+                <Label text="Product Id" />
+                <Text text="{ProductID}"></Text>
+
+                <Label text="Suplier Id" />
+                <!-- <Button text="{SupplierID}" width="5px" type="Transparent"></Button> -->
+                <!-- <Link id="SupplierPopover" text="{SupplierID}" press="SupplierPopover" ></Link> -->
+                <Link id="SupplierPopover" text="{SupplierID}" press="SupplierPopover"></Link>
+
+                <Label text="Category ID​" />
+                <!-- <Button text="{CategoryID}" width="5px" type="Transparent"></Button> -->
+                <Link text="{CategoryID}" ></Link>
+
+                <Label text="Quantity Per Unit ​" />
+                <Text text="{QuantityPerUnit}"></Text>
+
+                <Label text="Unit Price ​" />
+                <Text text="{UnitPrice}"></Text>
+
+                <Label text="UnitsInStock ​" />
+                <Text text="{UnitsInStock}"></Text>
+
+                <Label text="UnitsOnOrder ​" />
+                <Text text="{UnitsOnOrder}"></Text>
+
+                <Label text="ReorderLevel ​" />
+                <Text text="{ReorderLevel}"></Text>
+
+                <Label text="Discontinued ​" />
+                <Text text="{Discontinued}"></Text>
+
+            </form:content>
+        </form:SimpleForm>
+
+        <footer>
+            <Bar>
+                <contentLeft>
+                    <Button text="Back" type="Back" press="onBack"/>
+                </contentLeft>
+               
+            </Bar>
+        </footer>
+
+    </Page>
+</mvc:View>

@@ -1,0 +1,220 @@
+<mvc:View 
+    xmlns:layout="sap.ui.layout" 
+    xmlns:uxap="sap.uxap" 
+    controllerName="assignmentfifth.controller.EmpDetails"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    
+    <Page title="{i18n>title}">
+        <uxap:ObjectPageHeaderContent>
+            <uxap:content>
+                <VBox>
+                    <!-- <Image src="{}" description="Icon"></Image> -->
+                    <ImageContent src="{/image.png}" description="Icon"></ImageContent>
+                </VBox>   
+
+                <VBox width="60%">
+                    <HBox class="sapUiSmallMargin">
+                        <Text text="Employee Name:-" width="150px"/>
+                        <Title text="{FirstName} {LastName}"/>
+                    </HBox>
+
+                    <HBox class="sapUiSmallMargin">
+                        <Text text="Title:-" width="150px"/>
+                        <Title text="{Title}"/>
+                    </HBox>
+
+                    <HBox class="sapUiSmallMargin">
+                        <Text text="Home/Phone:-" width="150px"/>
+                        <Title text="{HomePhone}"/>
+                    </HBox>
+                </VBox>
+
+                <VBox>
+                    <HBox class="sapUiSmallMargin">
+                        <Text text="Country:-" width="80px"/>
+                        <Title text="{Country}"/>
+                    </HBox>
+                </VBox>
+            </uxap:content>
+        </uxap:ObjectPageHeaderContent>
+
+        <IconTabBar>
+            <items>
+                <IconTabFilter text="Emp. Info">
+                
+                	<!-- <uxap:ObjectPageSubSection id="personalSS1" title="Annaya" titleUppercase="false"> -->
+
+                    <!-- <uxap:ObjectPageSubSection id="personalSS1" title="Annaya" titleUppercase="false"> -->
+
+                        <Bar>
+                            <contentRight>
+                                <Button id="edit" text="Edit" type="Emphasized" press=".onEdit" class="sapUiSmallMargin"/>
+                                <Button id="save" text="Save" type="Emphasized" press=".onSave" class="sapUiSmallMargin"/>
+                                <Button id="cancel" text="Cancel" type="Emphasized" press=".onCancel" class="sapUiSmallMargin"/>
+                            </contentRight>
+                        </Bar>
+
+                        <FlexBox justifyContent="SpaceBetween">
+                            <VBox width="33.33333333333333%">
+                                <Title text="Personal Details​" class="sapUiSmallMarginTop"/>
+
+                                <VBox alignItems="Start" width="100%" class="sapUiSmallMargin">
+                                    <Text text="Birth Date"/>
+                                    <Input id="birthInput" value="{BirthDate}" editable="false" width="100%"/>
+                                </VBox>
+                            </VBox>
+                            
+                            <VBox width="33.33333333333333%">
+                                <Title text="Address Details​" class="sapUiSmallMarginTop"/>
+
+                                <VBox alignItems="Start" width="100%" class="sapUiSmallMargin">
+                                    <Text text="Address"/> 
+                                    <Input id="addressInput" value="{Address}" editable="false" width="100%"/>
+                                    <Text text="City" class="sapUiSmallMarginTop"/>
+                                    <Input id="cityInput" value="{City}" editable="false" width="100%"/>
+                                    <Text text="Postal Code" class="sapUiSmallMarginTop"/>
+                                    <Input id="postalInput" value="{PostalCode}" editable="false" width="100%"/>
+                                </VBox>
+                            </VBox>
+                            
+                            <VBox width="33.33333333333333%">
+                                <Title text="Contact Details​" class="sapUiSmallMarginTop"/>
+
+                                <VBox alignItems="Start" width="100%" class="sapUiSmallMargin">
+                                    <Text text="Extension"/>
+                                    <Input id="extensionInput" value="{Extension}" editable="false" width="100%"/>
+                                    <Text text="Phone" class="sapUiSmallMarginTop"/>
+                                    <Input id="phoneInput" value="{HomePhone}" editable="false" width="100%"/>
+                                </VBox>
+                            </VBox>
+                        </FlexBox>
+                    <!-- </uxap:ObjectPageSubSection> -->
+
+                </IconTabFilter>
+
+                <IconTabFilter text="Orders">
+                    <Table id="ordersTable" items="{/Orders}">
+                        <columns>
+                            <Column>
+                                <Text text="Order Id"/>
+                            </Column>
+                            <Column>
+                                <Text text="Customer Id"/>
+                            </Column>
+                            <Column>
+                                <Text text="Ship Via"/>
+                            </Column>
+                            <Column>
+                                <Text text="Ship Name"/>
+                            </Column>
+                            <Column>
+                                <Text text="Frieght"/>
+                            </Column>
+                        </columns>
+                        
+                        <items>
+                            <ColumnListItem press="onItemPress" type="Navigation">
+                                <cells>
+                                    <Text text="{OrderID}"></Text>
+                                    <!-- <Text text="{CustomerID}" press="showPopover"/> -->
+                                    <Button text="{CustomerID}" type="Transparent" press="showCustomerIDPopover" />
+                                    <Button text="{ShipVia}" type="Transparent" />
+                                    <Text text="{ShipName}"/>
+                                    <Text text="{Freight}"/>
+                                    <Text text="{ShipCountry}"/>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </IconTabFilter>
+
+                <IconTabFilter text="Territories​">
+
+                    <HBox alignItems="Center" class="sapUiSmallMargin">
+                        <Text text="Terriotory ID​" width="100px"></Text>
+                        <SearchField liveChange="onSearch"></SearchField>
+                    </HBox>
+
+                    <Table id="territoriesTable" items="{/Territories}" >
+                        <columns>
+                            <Column ><Text text="TerritoryID​"></Text></Column>
+                        </columns>
+                        <columns>
+                            <Column ><Text text="TerritoryDescription​"></Text></Column>
+                        </columns>
+                        <columns>
+                            <Column ><Text text="RegionID​"></Text></Column>
+                        </columns>
+
+                        <items>
+                            <ColumnListItem  press="onNext">
+                                <cells>
+                                    <Text text="{TerritoryID}"></Text>
+                                    <Text text="{TerritoryDescription}"></Text>
+                                    <Text text="{RegionID}"></Text>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+
+
+                </IconTabFilter>
+            </items>
+        </IconTabBar>
+
+        <footer>
+            <Bar>
+                <contentLeft>
+                    <Button text="Back" type="Back" press="onBack"/>
+                </contentLeft>
+            </Bar>
+        </footer>
+    </Page>
+</mvc:View>
+
+
+<!-- <mvc:View
+  controllerName="assignmentfifth.controller.EmpDetails"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  xmlns:opf="sap.uxap">
+  <opf:ObjectPageLayout>
+    <opf:headerTitle>
+      <opf:ObjectPageDynamicHeaderTitle>
+        <opf:heading>
+          <Text text="{FirstName} {LastName}" wrapping="true" />
+        </opf:heading>
+      </opf:ObjectPageDynamicHeaderTitle>
+    </opf:headerTitle>
+    <opf:sections>
+      <opf:ObjectPageSection title="Employee Details">
+        <opf:subSections>
+          <opf:ObjectPageSubSection>
+            <opf:blocks>
+              <VBox>
+                <items>
+                  <ObjectAttribute title="Home Phone" text="{HomePhone}" />
+                  <core:Icon src="sap-icon://employee" size="4rem" />
+                  
+
+                  <ObjectAttribute title="Name" id="name" text="{Firstname}" ></ObjectAttribute>
+                  <Text id="" text="{FirstName} {LastName}"></Text>
+
+                  <Image id="employeeImage"/>
+                </items>
+              </VBox>
+              <HBox >
+                <items>
+                  <ObjectAttribute title="Country" text="{Country}" />
+                </items>
+              </HBox>
+            </opf:blocks>
+          </opf:ObjectPageSubSection>
+        </opf:subSections>
+      </opf:ObjectPageSection>
+    </opf:sections>
+  </opf:ObjectPageLayout>
+</mvc:View> -->
+

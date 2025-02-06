@@ -2,7 +2,7 @@
   "Shipments": [
       {
           "ShipmentID": 12345678,
-          "CustomerName": "Ananya Joshi",
+          "CustomerName": "Drashan Soni",
           "CarrierName": "XYZ",
           "Destination": "Indore , M.P."
       },
@@ -10,7 +10,7 @@
           "ShipmentID": 87654321,
           "CustomerName": "Yash Technology",
           "CarrierName": "ABC",
-          "Destination": "Hydrabad, Maharashtra"
+          "Destination": "Pune, Maharashtra"
       }
   ]
 }

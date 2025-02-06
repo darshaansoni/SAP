@@ -12,8 +12,8 @@ sap.ui.define([
             window.history.go(-1)
         },
         continue:function(){
-            this.oRouter.navTo("RoutePolicies")
-            alert("kese ho")
+            this.oRouter.navTo("RoutePoliciesDetails")
+            // alert("!!")
         }
     });
 });

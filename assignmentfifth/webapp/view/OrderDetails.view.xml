@@ -1,0 +1,52 @@
+<mvc:View xmlns:filterbar="sap.ui.comp.filterbar" 
+    xmlns:layout="sap.ui.layout"
+     xmlns:uxap="sap.uxap" 
+    controllerName="assignmentfifth.controller.OrderDetails"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page title="{i18n>title}">
+
+        <FlexBox justifyContent="SpaceAround" class="sapUiSmallMargin">
+            <Title id="orderNo" text="Order: {orderNo}" width="100%"/>
+        </FlexBox>
+
+        <Bar >
+            <contentLeft>
+                <SearchField liveChange="onSearch" class="sapUiLargeMargin" placeholder="ProductId" width="50%"></SearchField>
+            </contentLeft>
+            <contentRight>
+                <Button text="Go" type="Emphasized" class="sapUiLargeMargin" ></Button>
+            </contentRight>
+        </Bar>
+
+        <Table items="{/Order_Details}" id="productTable" >
+            <columns>
+                <Column><Text text="Product ID" /></Column>
+                <Column><Text text="Unit ID" /></Column>
+                <Column><Text text="Quantity" /></Column>
+                <Column><Text text="Discount" /></Column>
+            </columns>
+            <ColumnListItem type="Navigation" press="onNext">
+                <cells>
+                    <Text text="{ProductID}" />
+                    <Text text="NA" />
+                    <Text text="{Quantity}" />
+                    <Text text="{Discount}" />
+                </cells>
+            </ColumnListItem>
+        </Table>
+
+        <footer>
+            <Bar>
+                <contentLeft>
+                    <Button text="Back" type="Back" press="onBack" />
+                </contentLeft>
+                <contentRight>
+                    <Button text="Next" type="Accept" press="onNext" />
+                </contentRight>
+            </Bar>
+        </footer>
+      
+        
+        </Page>
+</mvc:View>
